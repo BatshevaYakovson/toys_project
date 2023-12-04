@@ -35,71 +35,6 @@
 
   <h1>API Documentation</h1>
 
-  <h2>Toys API</h2>
-
-  <h3>Base URL</h3>
-  <p>/api/toys</p>
-
-  <h3>Endpoints</h3>
-
-  <h4>1. Get List of Toys</h4>
-  <p>GET /</p>
-  <p>Retrieves a paginated list of toys.</p>
-  <table>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>perPage (optional)</td>
-      <td>Number of items per page (default: 5)</td>
-    </tr>
-    <tr>
-      <td>page (optional)</td>
-      <td>Page number (default: 1)</td>
-    </tr>
-  </table>
-
-  <h4>2. Search for Toys</h4>
-  <p>GET /search</p>
-  <p>Searches for toys based on a specified query string.</p>
-  <table>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>s</td>
-      <td>Query string for toy name search.</td>
-    </tr>
-  </table>
-
-  <h4>3. Add a New Toy</h4>
-  <p>POST /</p>
-  <p>Adds a new toy to the database.</p>
-  <table>
-    <tr>
-      <th>Authentication</th>
-      <th>Request Body</th>
-    </tr>
-    <tr>
-      <td>Requires user authentication.</td>
-      <td>
-        <pre>
-{
-  "name": "Toy Name",
-  "info": "Toy description.",
-  "category": "Toy Category",
-  "img_url": "https://example.com/toy-image.jpg",
-  "price": 29.99
-}
-        </pre>
-      </td>
-    </tr>
-  </table>
-
-  <!-- Repeat the above structure for other endpoints -->
-
   <h2>User API</h2>
 
   <h3>Base URL</h3>
@@ -176,6 +111,69 @@
         <pre>
 {
   "token": "JWT_TOKEN"
+}
+        </pre>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Toys API</h2>
+
+  <h3>Base URL</h3>
+  <p>/api/toys</p>
+
+  <h3>Endpoints</h3>
+
+  <h4>1. Get List of Toys</h4>
+  <p>GET /</p>
+  <p>Retrieves a paginated list of toys.</p>
+  <table>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>perPage (optional)</td>
+      <td>Number of items per page (default: 5)</td>
+    </tr>
+    <tr>
+      <td>page (optional)</td>
+      <td>Page number (default: 1)</td>
+    </tr>
+  </table>
+
+  <h4>2. Search for Toys</h4>
+  <p>GET /search</p>
+  <p>Searches for toys based on a specified query string.</p>
+  <table>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>Query string for toy name search.</td>
+    </tr>
+  </table>
+
+  <h4>3. Add a New Toy</h4>
+  <p>POST /</p>
+  <p>Adds a new toy to the database.</p>
+  <table>
+    <tr>
+      <th>Authentication</th>
+      <th>Request Body</th>
+    </tr>
+    <tr>
+      <td>Requires user authentication.</td>
+      <td>
+        <pre>
+{
+  "name": "Toy Name",
+  "info": "Toy description.",
+  "category": "Toy Category",
+  "img_url": "https://example.com/toy-image.jpg",
+  "price": 29.99
 }
         </pre>
       </td>
