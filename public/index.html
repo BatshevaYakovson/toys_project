@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,8 @@
       background-color: #fff;
     }
 
-    th, td {
+    th,
+    td {
       border: 1px solid #ddd;
       padding: 12px;
       text-align: left;
@@ -56,6 +58,7 @@
   </style>
   <title>API Documentation</title>
 </head>
+
 <body>
 
   <h1>API Documentation</h1>
@@ -78,6 +81,18 @@
     <tr>
       <td>GET /search</td>
       <td>Searches for toys based on a specified query string.</td>
+      <td>User Authentication</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>Get a list of the toys by min & max , it will present 10 results per page.</td>
+      <td>User Authentication</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>search for a toy by searching follwing name or info after the "s=", it will present 10 results per page.</td>
       <td>User Authentication</td>
       <td>N/A</td>
     </tr>
@@ -149,6 +164,13 @@
       <td>N/A</td>
     </tr>
     <tr>
+      <td>DELETE </td>
+      <td>Delete a user from the data base. Admin token can delete every user , and user can delete only himself.
+      </td>
+      <td>Admin Authentication</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
       <td>POST /</td>
       <td>Registers a new user.</td>
       <td>N/A</td>
@@ -178,4 +200,5 @@
   </table>
 
 </body>
+
 </html>
